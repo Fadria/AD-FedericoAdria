@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-name="affiliations" match-catalog="starwars"></table-filter>
+	<table-filter match-name="characters" match-catalog="starwars"></table-filter>
+	<table-filter match-name="character_affiliations" match-catalog="starwars"></table-filter>
+	<table-filter match-name="character_films" match-catalog="starwars"></table-filter>
+	<table-filter match-name="deaths" match-catalog="starwars"></table-filter>
+	<table-filter match-name="films" match-catalog="starwars"></table-filter>
+	<table-filter match-name="planets" match-catalog="starwars"></table-filter>
+</hibernate-reverse-engineering>
