@@ -46,14 +46,15 @@ public class Ejercicio {
 				
 				// Obtenemos los diálogos que contienen el nombre de este personaje
 				ICriterion criterio2 = Where.like("dialog", "%" + nombrePersonaje + "%");
-				Values dialogos = odb.getValues(new ValuesCriteriaQuery(Dialog.class, criterio2).field("dialog"));
+				Values dialogos = odb.getValues(new ValuesCriteriaQuery(Dialog.class, criterio2).field("dialog").field("character.name"));
 				
 				// Mostraremos el diálogo si tiene el nombre del personaje de esta itineración
 				while(dialogos.hasNext()) {
 					// Obtenemos el diálogo y lo mostramos
 					ObjectValues valorDialogos = dialogos.nextValues();
 					String dialogo = valorDialogos.getByAlias("dialog").toString();
-					System.out.println(dialogo);
+					String personajeQueLoDice = valorDialogos.getByAlias("character.name").toString();
+					System.out.println(personajeQueLoDice + ": " + dialogo);
 				}
 			}
 		} catch (IndexOutOfBoundsException e) {
